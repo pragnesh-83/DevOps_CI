@@ -1,0 +1,7 @@
+CI - Installation
+eclipse-with-plugins
+gradle-2.13-bin
+Jenkins2
+sonarqube-4.5.7
+set JAVA_HOME=D:\bcpabh\setups\jdk1.8.0_92
+start eclipse.exe -vm "%JAVA_HOME%\bin\javaw.exe"
