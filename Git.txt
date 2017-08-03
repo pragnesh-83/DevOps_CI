@@ -1,0 +1,106 @@
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/local-repo
+$ git --version
+git version 2.9.0.windows.1
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/local-repo
+$ git init
+
+--Hidden folder created - Git is Content management system
+$ ls -a
+./  ../  .git/
+
+$ notepad sample.txt
+--Check status
+$ git status
+
+-- Check branch
+$ git branch
+
+--Check milestone/versioning/commits
+$ git log
+
+$ git add sample.txt
+
+--All the stage files in that folder commited
+$ git commit -m "initial commit"
+
+---To create shared repository
+$ git init --bare shared-repo/
+
+$ git remote --help
+
+--Manage set of tracked repositories
+
+/d/Users/sogare/CI-training/shared-repo
+
+---creating alias for Remote location
+$ git remote add origin8 /d/Users/sogare/CI-training/shared-repo
+git remote add origin4 /d/Users/sogare/CI-training/shared-repo
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training
+$ git init --bare shared-repo/
+Initialized empty Git repository in D:/Users/sogare/CI-training/shared-repo/
+
+
+$ git remote -v
+origin8 D:/Users/sogare/CI-training/shared-repo (fetch)
+origin8 D:/Users/sogare/CI-training/shared-repo (push)
+
+--Content and history from master pushed
+$ git push origin8 master
+
+$ git log
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/local-repo (master)
+$ git remote add origin8 /d/Users/sogare/CI-training/shared-repo
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/local-repo (master)
+$ git remote -v
+
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (master)
+$ git fetch origin4
+
+--Content is feched but not in local branch but on remote branch
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (master)
+$ git branch -r
+  origin4/master
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (master)
+$ git checkout origin4/master
+
+git checkout -b master origin4/master
+
+--Display all branch remote + local branch
+$ git branch -a
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (master)
+$ git branch little-feature
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (master)
+$ git checkout little-feature
+Switched to branch 'little-feature'
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (little-feature)
+$ notepad sample.txt
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (little-feature)
+$ git add sample.txt
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (little-feature)
+$ git commit -m "added more text"
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/lisa-repo (little-feature)
+$ git push origin4 little-feature
+
+---
+$ git fetch origin8
+$ git branch little-feature
+$ git merge origin8/little-feature
+---
+
+sogare@DINMB621 MINGW64 /d/Users/sogare/CI-training/local-repo (little-feature)
+$ git merge origin8/little-feature
+
+
+
