@@ -102,11 +102,7 @@ docker pull hello-world
 
 docker run hello-world
 
-
-
 docker pull qlik/gradle
-
-docker run gradle
 
 docker run qlik/gradle
 
