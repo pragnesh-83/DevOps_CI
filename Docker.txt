@@ -101,3 +101,24 @@ docker info
 docker pull hello-world
 
 docker run hello-world
+
+
+
+docker pull qlik/gradle
+
+docker run gradle
+
+docker run qlik/gradle
+
+Copy VIM-Graddle project
+root@node1:/home/ubuntu# cd /vagrant
+root@node1:/vagrant# cd VIM-Gradle
+
+//create new image
+docker build -t dtcc/vim -f Dockerfile2 .
+
+//Run the image
+docker run dtcc/vim
+
+//remove the image
+docker rmi -f dtcc/vim
