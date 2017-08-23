@@ -1,0 +1,61 @@
+//Day1
+Jenkins:
+
+Job-> 
+1) pull project from GIT repo
+2) Invoke gradle script (TDD/BDD)
+3) Archive artifact - docker image
+4) static code configuration
+
+Day 1:
+git clone <github url>
+goto repository folder
+git remote -v
+git branch (//Shows master branch
+git branch -r //other branches readonly
+
+notepad sample.txt
+git add sample.txt
+git commit -m "Modified by so"
+git push origin
+
+
+//Day2
+//Refreshes repository
+apt-get update
+
+apt-get update && apt-get install -y docker.io
+
+
+docker --version
+
+//if images are there
+docker images
+
+//shows running cointainer
+docker ps 
+
+//Running + exit cointainer
+docker ps -a
+
+docker info
+
+docker pull hello-world
+
+docker run hello-world
+
+docker pull centos //pull the latest version of OS centos
+
+docker pull centos:6.7 //pull specific version
+
+docker run -it centos:6.7 //intractive terminal for centos
+
+//installed terminal prompt
+yum install git
+
+Cntl + p +q //ditached from terminal and go back to 
+
+
+docker attach <conitainer ID>
+
+docker attach 45d8c4a3e412
