@@ -59,3 +59,45 @@ Cntl + p +q //ditached from terminal and go back to
 docker attach <conitainer ID>
 
 docker attach 45d8c4a3e412
+
+---
+Create box folder
+Copy Official ubuntu 16 box file from www.vagrantbox.es
+run command
+$vagrant box add <box_name> <box_file_name>
+$vagrant box add ubuntu-xenial-base xenial-server-cloudimg-amd64-vagrant.box
+
+create with-ubuntu folder
+copy Vagrant file
+vagrant init
+vagrant up
+vagarnt ssh
+
+sudo su
+nano /etc/apt/apt.conf
+
+root@node1:/home/ubuntu# nano /etc/apt/apt.conf
+
+
+Acquire::http::proxy "https://corp%5csogare:Yukti%400123@inpunwbs02-wcg.corp.capgemini.com:8080";
+Acquire::https::proxy "https://corp%5csogare:Yukti%400123@inpunwbs02-wcg.corp.capgemini.com:8080";
+
+root@node1:/home/ubuntu# apt-get update
+root@node1:/home/ubuntu# apt-get install -y docker.io
+
+docker --version
+
+//if images are there
+docker images
+
+//shows running cointainer
+docker ps 
+
+//Running + exit cointainer
+docker ps -a
+
+docker info
+
+docker pull hello-world
+
+docker run hello-world
